@@ -1,0 +1,69 @@
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+arm_controller:
+  type: position_controllers/JointTrajectoryController
+  joints:
+    - J_4
+    - J_5
+    - J_6
+    - J_8
+    - J_9
+    - J_10
+    - J_11
+    - R_thumb_proximal_yaw_joint
+    - R_thumb_proximal_pitch_joint
+    - R_thumb_intermediate_joint
+    - R_thumb_distal_joint
+    - R_index_proximal_joint
+    - R_index_intermediate_joint
+    - R_middle_proximal_joint
+    - R_middle_intermediate_joint
+    - R_ring_proximal_joint
+    - R_ring_intermediate_joint
+    - R_pinky_proximal_joint
+    - R_pinky_intermediate_joint
+  constraints:
+    goal_time: 0.6
+    stopped_velocity_tolerance: 0.01
+    J_4: {trajectory: 0.1, goal: 0.1}
+    J_5: {trajectory: 0.1, goal: 0.1}
+    J_6: {trajectory: 0.1, goal: 0.1}
+    J_8: {trajectory: 0.1, goal: 0.1}
+    J_9: {trajectory: 0.1, goal: 0.1}
+    J_10: {trajectory: 0.1, goal: 0.1}
+    J_11: {trajectory: 0.1, goal: 0.1}
+    R_thumb_proximal_yaw_joint: {trajectory: 0.1, goal: 0.1}
+    R_thumb_proximal_pitch_joint: {trajectory: 0.1, goal: 0.1}
+    R_thumb_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+    R_thumb_distal_joint: {trajectory: 0.1, goal: 0.1}
+    R_index_proximal_joint: {trajectory: 0.1, goal: 0.1}
+    R_index_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+    R_middle_proximal_joint: {trajectory: 0.1, goal: 0.1}
+    R_middle_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+    R_ring_proximal_joint: {trajectory: 0.1, goal: 0.1}
+    R_ring_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+    R_pinky_proximal_joint: {trajectory: 0.1, goal: 0.1}
+    R_pinky_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+  gains:
+    J_4: {p: 100.0, i: 0.01, d: 1.0}
+    J_5: {p: 100.0, i: 0.01, d: 1.0}
+    J_6: {p: 100.0, i: 0.01, d: 1.0}
+    J_8: {p: 100.0, i: 0.01, d: 1.0}
+    J_9: {p: 100.0, i: 0.01, d: 1.0}
+    J_10: {p: 100.0, i: 0.01, d: 1.0}
+    J_11: {p: 100.0, i: 0.01, d: 1.0}
+    R_thumb_proximal_yaw_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_thumb_proximal_pitch_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_thumb_intermediate_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_thumb_distal_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_index_proximal_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_index_intermediate_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_middle_proximal_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_middle_intermediate_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_ring_proximal_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_ring_intermediate_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_pinky_proximal_joint: {p: 100.0, i: 0.01, d: 1.0}
+    R_pinky_intermediate_joint: {p: 100.0, i: 0.01, d: 1.0}
+

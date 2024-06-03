@@ -1,0 +1,66 @@
+controller_list:
+  - name: fake_L_arm_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - J_4
+      - J_5
+      - J_6
+      - J_7
+      - J_8
+      - J_9
+      - J_10
+      - J_11
+      - J_12
+  - name: fake_torso_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - J_1
+      - J_2
+      - J_3
+  - name: fake_finger_1_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - R_index_proximal_joint
+      - R_index_intermediate_joint
+  - name: fake_finger_2_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - R_middle_proximal_joint
+      - R_middle_intermediate_joint
+  - name: fake_finger_3_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - R_ring_proximal_joint
+      - R_ring_intermediate_joint
+  - name: fake_finger_4_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - R_pinky_proximal_joint
+      - R_pinky_intermediate_joint
+  - name: fake_finger_5_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - R_thumb_proximal_yaw_joint
+      - R_thumb_proximal_pitch_joint
+      - R_thumb_intermediate_joint
+      - R_thumb_distal_joint
+  - name: fake_l_r_t_controller
+    type: $(arg fake_execution_type)
+    joints:
+      - J_1
+      - J_2
+      - J_3
+      - J_4
+      - J_5
+      - J_6
+      - J_7
+      - J_8
+      - J_9
+      - J_10
+      - J_11
+      - J_12
+initial:  # Define initial robot poses per group
+#  - group: L_arm
+#    pose: home
+
+  []

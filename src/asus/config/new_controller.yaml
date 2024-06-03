@@ -1,0 +1,58 @@
+controller_list:
+  
+  - name: l_r_t_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+  
+    - J_4
+    - J_5
+    - J_6
+  
+    - J_8
+    - J_9
+    - J_10
+    - J_11
+    
+  - name: finger_1_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    default: true
+    joints:
+    - R_index_proximal_joint
+    - R_index_intermediate_joint   
+
+  - name: finger_2_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+    - R_middle_proximal_joint
+    - R_middle_intermediate_joint
+      
+  - name: finger_3_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+    - R_ring_proximal_joint
+    - R_ring_intermediate_joint
+      
+  - name: finger_4_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+    - R_pinky_proximal_joint
+    - R_pinky_intermediate_joint
+    
+      
+  - name: finger_5_controller
+    action_ns: follow_joint_trajectory
+    type: FollowJointTrajectory
+    joints:
+    - R_thumb_proximal_yaw_joint
+    - R_thumb_proximal_pitch_joint
+    - R_thumb_intermediate_joint
+    - R_thumb_distal_joint
+    
+
+    

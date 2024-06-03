@@ -1,0 +1,97 @@
+# Controller for the robot arm
+l_r_t_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - J_5
+    - J_6
+    - J_8
+    - J_9
+    - J_10
+    - J_11
+    - J_4
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0
+      J_4: {trajectory: 0.1, goal: 0.1}
+      J_5: {trajectory: 0.1, goal: 0.1}
+      J_6: {trajectory: 0.1, goal: 0.1}
+      J_8: {trajectory: 0.1, goal: 0.1}
+      J_9: {trajectory: 0.1, goal: 0.1}
+      J_10: {trajectory: 0.1, goal: 0.1}
+      J_11: {trajectory: 0.1, goal: 0.1}
+
+finger_1_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - R_index_proximal_joint
+    - R_index_intermediate_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0
+      R_index_proximal_joint: {trajectory: 0.1, goal: 0.1}
+      R_index_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+      
+finger_2_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - R_middle_proximal_joint
+    - R_middle_intermediate_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0
+      R_middle_proximal_joint: {trajectory: 0.1, goal: 0.1}
+      R_middle_intermediate_joint: {trajectory: 0.1, goal: 0.1}     
+      
+finger_3_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - R_ring_proximal_joint
+    - R_ring_intermediate_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0
+      R_ring_proximal_joint: {trajectory: 0.1, goal: 0.1}
+      R_ring_intermediate_joint: {trajectory: 0.1, goal: 0.1}     
+
+finger_4_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - R_pinky_proximal_joint
+    - R_pinky_intermediate_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0
+      R_pinky_proximal_joint: {trajectory: 0.1, goal: 0.1}
+      R_pinky_intermediate_joint: {trajectory: 0.1, goal: 0.1}     
+
+finger_5_controller:
+  type: "position_controllers/JointTrajectoryController"
+  joints:
+    - R_thumb_proximal_yaw_joint
+    - R_thumb_proximal_pitch_joint
+    - R_thumb_intermediate_joint
+    - R_thumb_distal_joint
+  constraints:
+      goal_time: 0.6
+      stopped_velocity_tolerance: 0
+      R_thumb_proximal_yaw_joint: {trajectory: 0.1, goal: 0.1}
+      R_thumb_proximal_pitch_joint: {trajectory: 0.1, goal: 0.1}                      
+      R_thumb_intermediate_joint: {trajectory: 0.1, goal: 0.1}
+      R_thumb_distal_joint: {trajectory: 0.1, goal: 0.1}       
+
+
+                    
+#effort_controller_J4:
+ # type: "effort_controllers/JointPositionController"
+  #joint: "J_4"
+  #pid:
+   # p: 10.0    # Proportional gain
+   # i: 0.0     # Integral gain
+   # d: 1.0     # Derivative gain
+   # i_clamp: 0.0  # Integral windup limit
+
+  
+joint_state_controller:
+  type: "joint_state_controller/JointStateController"
+  publish_rate: 50
+

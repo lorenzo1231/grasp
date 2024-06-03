@@ -1,0 +1,25 @@
+<launch>
+  <!-- Load the robot in Gazebo -->
+  <include file="$(find urdf_27)/launch/arm_urdf.launch" />
+
+  <!-- Launch MoveIt Move Group Node -->
+  <include file="$(find asus)/launch/move_group.launch" />
+
+  <!-- Run RViz and load the default configuration to see the state of the move_group node -->
+  <arg name="use_rviz" default="true" />
+  <include file="$(find asus)/launch/moveit_rviz.launch" if="$(arg use_rviz)">
+    <arg name="rviz_config" value="$(find asus)/launch/moveit.rviz"/>
+  </include>
+
+  <!-- Start the robot state publisher -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen">
+    <param name="robot_description" command="cat $(find urdf_27)/urdf/urdf_27.urdf"/>
+  </node>
+  
+  <!-- Start joint state publisher -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+
+  <!-- Custom teleoperation node -->
+  <node pkg="urdf_27" type="teleop_joint_control.py" name="teleop_joint_control" output="screen" cwd="node" />
+</launch>
+

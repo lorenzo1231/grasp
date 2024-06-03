@@ -1,0 +1,2 @@
+asus:urdf_27
+-DCATKIN_DEVEL_PREFIX=/home/borg/move/devel -DCMAKE_INSTALL_PREFIX=/home/borg/move/install -G Unix Makefiles
